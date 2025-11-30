@@ -1,0 +1,62 @@
+{
+  "blue_blue": {
+    "neutral": "blue",
+    "white": "cyan",
+    "black": "navy",
+    "silver": "cobalt"
+  },
+  "blue_null": {
+    "neutral": "blue",
+    "white": "cyan",
+    "black": "navy",
+    "silver": "cobalt"
+  },
+  "blue_red": {
+    "neutral": "purple",
+    "white": "lilac",
+    "black": "midnight",
+    "silver": "magenta"
+  },
+  "blue_yellow": {
+    "neutral": "green",
+    "white": "lime",
+    "black": "pine",
+    "silver": "verdant"
+  },
+  "null_red": {
+    "neutral": "red",
+    "white": "pink",
+    "black": "crimson",
+    "silver": "burgundy"
+  },
+  "red_red": {
+    "neutral": "red",
+    "white": "pink",
+    "black": "crimson",
+    "silver": "burgundy"
+  },
+  "red_yellow": {
+    "neutral": "orange",
+    "white": "sand",
+    "black": "brown",
+    "silver": "bronze"
+  },
+  "yellow_yellow": {
+    "neutral": "yellow",
+    "white": "cream",
+    "black": "gold",
+    "silver": "amber"
+  },
+  "null_yellow": {
+    "neutral": "yellow",
+    "white": "cream",
+    "black": "gold",
+    "silver": "amber"
+  },
+  "null_null": {
+    "neutral": "grey",
+    "white": "white",
+    "black": "black",
+    "silver": "silver"
+  }
+}

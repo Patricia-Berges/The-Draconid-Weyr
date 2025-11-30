@@ -1,72 +1,73 @@
-import pygame
-import random
+import json
+import os
+
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QPixmap, QPainter, QColor, QImage
 
 
-# Load all the parts of the sprite
-lineart = pygame.image.load("sprites/dragon_lineart.png")
-base_color = pygame.image.load("sprites/dragon_base_color.png")
-skin = pygame.image.load("sprites/dragon_skin.png")
-horns = pygame.image.load("sprites/dragon_horns.png")
-stripes = pygame.image.load("sprites/dragon_stripes.png")
+def load_data(file_name):
+    base_path = os.path.dirname(__file__)
+    file_path = os.path.join(base_path, "..", "data", file_name)
+    with open(file_path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
 
-def render_sprite():
-    sprite = pygame.Surface(lineart.get_size(), pygame.SRCALPHA)
-    sprite.blit(base_color, (0, 0))
-    sprite.blit(skin, (0, 0))
-    sprite.blit(horns, (0, 0))
-    sprite.blit(stripes, (0, 0))
-    sprite.blit(lineart, (0, 0))
-    return sprite
+HEX_CODES = load_data("hex_codes.json")
 
 
-final_sprite = render_sprite()
+def assemble_sprite(lineart, base_color, tint, horns, eyes):
+    final_sprite = QPixmap(lineart.size())
+    final_sprite.fill(Qt.transparent)
+
+    painter = QPainter(final_sprite)
+    painter.drawPixmap(0, 0, base_color)
+    painter.drawPixmap(0, 0, tint)
+    painter.drawPixmap(0, 0, horns)
+    painter.drawPixmap(0, 0, eyes)
+    painter.drawPixmap(0, 0, lineart)
+    painter.end()
+
+    return final_sprite
 
 
-def change_color(image, red, green, blue):
-    """Randomizes the base color of the image by changing its RGB values."""
-    image = image.copy()  # Create a copy to avoid modifying the original
-    width, height = image.get_size()
+def tint_layer(layer, color):
+    base = layer.toImage().convertToFormat(QImage.Format_ARGB32)
+    tinted = QImage(base.size(), QImage.Format_ARGB32)
+    tinted.fill(Qt.GlobalColor.transparent)  # Keep transparent background
 
-    # Generate random RGB values for the new base color
-    new_color = pygame.Color(red, green, blue)
+    painter = QPainter(tinted)
+    painter.drawImage(0, 0, base)
 
-    for x in range(width):
-        for y in range(height):
-            current_color = image.get_at((x, y))  # Get the pixel color
+    # Apply color overlay
+    painter.setCompositionMode(QPainter.CompositionMode_SourceIn)
+    painter.fillRect(tinted.rect(), color)
 
-            if current_color[3] > 0:  # Ignore transparent pixels
-                # Change the color of non-transparent pixels to the new random color
-                image.set_at((x, y), new_color)
-
-    return image
+    painter.end()
+    return QPixmap.fromImage(tinted)
 
 
-def random_color_value():
-    return random.randint(0, 255)
+def render_sprite(species, age, color):
+    """
+    Accepted color as PHENOTYPE
+    """
+    species_sprite = species
+    if age <= 10:
+        species_sprite = f'{species}_baby'
+
+    hex_code = HEX_CODES[color]
+
+    lineart = QPixmap(f'sprites/{species_sprite}_lineart.png')
+    base_color = QPixmap(f'sprites/{species_sprite}_base.png')
+    tint = QPixmap(f'sprites/{species_sprite}_tint.png')
+    horns = QPixmap(f'sprites/{species_sprite}_horns.png')
+    eyes = QPixmap(f'sprites/{species_sprite}_eye.png')
+
+    adjusted_tint = tint_layer(tint, QColor(hex_code))
+    if color == "silver":
+        adjusted_tint.fill(Qt.transparent)
+
+    final_sprite = assemble_sprite(lineart, base_color, adjusted_tint, horns, eyes)
+
+    return final_sprite
 
 
-def randomize_all_parts(line, base, skin_color, horn_color, marking):
-    """Randomize the colors of each part."""
-    # Randomize each part
-    randomized_base = change_color(base, random_color_value(), random_color_value(), random_color_value())
-    randomized_skin = change_color(skin_color, random_color_value(), random_color_value(), random_color_value())
-    randomized_stripes = change_color(marking, random_color_value(), random_color_value(), random_color_value())
-
-    # Re-render the dragon sprite with the randomized parts
-    new_sprite = pygame.Surface(line.get_size(), pygame.SRCALPHA)
-
-    # Combine each part with the lineart
-    new_sprite.blit(randomized_base, (0, 0))
-    new_sprite.blit(randomized_skin, (0, 0))
-    new_sprite.blit(horn_color, (0, 0))
-    new_sprite.blit(randomized_stripes, (0, 0))
-    new_sprite.blit(line, (0, 0))
-
-    return new_sprite
-
-
-def randomize_dragon_colors():
-    sprite = randomize_all_parts(lineart, base_color, skin, horns, stripes)
-    print("Dragon parts have been randomized!")
-    return sprite

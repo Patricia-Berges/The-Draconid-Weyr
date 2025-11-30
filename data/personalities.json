@@ -1,0 +1,226 @@
+{
+  "Apathetic": {
+    "social": "low",
+    "aggression": "low",
+    "energy": "low",
+    "temperament": "low",
+    "curiosity": "low"
+  },
+  "Daydreamer": {
+    "social": "low",
+    "aggression": "low",
+    "energy": "low",
+    "temperament": "low",
+    "curiosity": "high"
+  },
+  "Observant": {
+    "social": "low",
+    "aggression": "low",
+    "energy": "low",
+    "temperament": "high",
+    "curiosity": "low"
+  },
+  "Attentive": {
+    "social": "low",
+    "aggression": "low",
+    "energy": "low",
+    "temperament": "high",
+    "curiosity": "high"
+  },
+  "Sneaky": {
+    "social": "low",
+    "aggression": "low",
+    "energy": "high",
+    "temperament": "low",
+    "curiosity": "low"
+  },
+  "Curious": {
+    "social": "low",
+    "aggression": "low",
+    "energy": "high",
+    "temperament": "low",
+    "curiosity": "high"
+  },
+  "Anxious": {
+    "social": "low",
+    "aggression": "low",
+    "energy": "high",
+    "temperament": "high",
+    "curiosity": "low"
+  },
+  "Thoughtful": {
+    "social": "low",
+    "aggression": "low",
+    "energy": "high",
+    "temperament": "high",
+    "curiosity": "high"
+  },
+  "Lonesome": {
+    "social": "low",
+    "aggression": "high",
+    "energy": "low",
+    "temperament": "low",
+    "curiosity": "low"
+  },
+  "Cold": {
+    "social": "low",
+    "aggression": "high",
+    "energy": "low",
+    "temperament": "low",
+    "curiosity": "high"
+  },
+  "Guarded": {
+    "social": "low",
+    "aggression": "high",
+    "energy": "low",
+    "temperament": "high",
+    "curiosity": "low"
+  },
+  "Attached": {
+    "social": "low",
+    "aggression": "high",
+    "energy": "low",
+    "temperament": "high",
+    "curiosity": "high"
+  },
+  "Snappy": {
+    "social": "low",
+    "aggression": "high",
+    "energy": "high",
+    "temperament": "low",
+    "curiosity": "low"
+  },
+  "Violent": {
+    "social": "low",
+    "aggression": "high",
+    "energy": "high",
+    "temperament": "low",
+    "curiosity": "high"
+  },
+  "Protective": {
+    "social": "low",
+    "aggression": "high",
+    "energy": "high",
+    "temperament": "high",
+    "curiosity": "low"
+  },
+  "Fierce": {
+    "social": "low",
+    "aggression": "high",
+    "energy": "high",
+    "temperament": "high",
+    "curiosity": "high"
+  },
+  "Peaceful": {
+    "social": "high",
+    "aggression": "low",
+    "energy": "low",
+    "temperament": "low",
+    "curiosity": "low"
+  },
+  "Jokester": {
+    "social": "high",
+    "aggression": "low",
+    "energy": "low",
+    "temperament": "low",
+    "curiosity": "high"
+  },
+  "Gentle": {
+    "social": "high",
+    "aggression": "low",
+    "energy": "low",
+    "temperament": "high",
+    "curiosity": "low"
+  },
+  "Loving": {
+    "social": "high",
+    "aggression": "low",
+    "energy": "low",
+    "temperament": "high",
+    "curiosity": "high"
+  },
+  "Jumpy": {
+    "social": "high",
+    "aggression": "low",
+    "energy": "high",
+    "temperament": "low",
+    "curiosity": "low"
+  },
+  "Adventurous": {
+    "social": "high",
+    "aggression": "low",
+    "energy": "high",
+    "temperament": "low",
+    "curiosity": "high"
+  },
+  "Paranoid": {
+    "social": "high",
+    "aggression": "low",
+    "energy": "high",
+    "temperament": "high",
+    "curiosity": "low"
+  },
+  "Mediator": {
+    "social": "high",
+    "aggression": "low",
+    "energy": "high",
+    "temperament": "high",
+    "curiosity": "high"
+  },
+  "Cunning": {
+    "social": "high",
+    "aggression": "high",
+    "energy": "low",
+    "temperament": "low",
+    "curiosity": "low"
+  },
+  "Bossy": {
+    "social": "high",
+    "aggression": "high",
+    "energy": "low",
+    "temperament": "low",
+    "curiosity": "high"
+  },
+  "Familiar": {
+    "social": "high",
+    "aggression": "high",
+    "energy": "low",
+    "temperament": "high",
+    "curiosity": "low"
+  },
+  "Empathetic": {
+    "social": "high",
+    "aggression": "high",
+    "energy": "low",
+    "temperament": "high",
+    "curiosity": "high"
+  },
+  "Vigilant": {
+    "social": "high",
+    "aggression": "high",
+    "energy": "high",
+    "temperament": "low",
+    "curiosity": "low"
+  },
+  "Dominant": {
+    "social": "high",
+    "aggression": "high",
+    "energy": "high",
+    "temperament": "low",
+    "curiosity": "high"
+  },
+  "Loyal": {
+    "social": "high",
+    "aggression": "high",
+    "energy": "high",
+    "temperament": "high",
+    "curiosity": "low"
+  },
+  "Playful": {
+    "social": "high",
+    "aggression": "high",
+    "energy": "high",
+    "temperament": "high",
+    "curiosity": "high"
+  }
+}

@@ -1,45 +1,23 @@
-from data.db_handler import create_db, fetch_all_draconids_names, delete_all_draconids, fetch_all_draconids
-import pygame
-from screens.main_screen import gen_main_screen
-from game_logic.ui import Button
-import game_logic.screen_manager as screen_manager
-
-# Initialize database and pygame
-create_db()
-pygame.init()
-
-# Constants
-WIDTH, HEIGHT = 800, 600
-BLACK = (0, 0, 0)
-GRAY = (100, 100, 100)
-DARK_GRAY = (50, 50, 50)
-WHITE = (255, 255, 255)
-
-# Create screen
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Draconid Game")
+import sys
+from PyQt5.QtWidgets import QApplication
+from data.db_handler import create_db
+from screens.main_screen import MainScreen
 
 
-# ---- State Management ----
-draconid_list = []
+def main():
+    # Initialize database
+    create_db()
+
+    # Initialize Qt app
+    app = QApplication(sys.argv)
+
+    # Create and show main screen
+    main_window = MainScreen()
+    main_window.show()
+
+    # Run event loop
+    sys.exit(app.exec_())
 
 
-# ---- Functions ----
-def delete_all():
-    delete_all_draconids()
-    print("Deleted all draconids")
-
-
-# ---- Main Loop ----
-running = True
-screen_manager.screen_generator = gen_main_screen
-
-while running:
-    screen.fill(BLACK)
-
-    if screen_manager.screen_generator:
-        screen_manager.screen_generator(screen)
-
-    pygame.display.flip()
-
-pygame.quit()
+if __name__ == "__main__":
+    main()

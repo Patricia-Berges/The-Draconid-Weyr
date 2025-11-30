@@ -1,0 +1,62 @@
+{
+  "social": {
+    "1": "extremely introverted",
+    "2": "very introverted",
+    "3": "introverted",
+    "4": "somewhat introverted",
+    "5": "a bit introverted",
+    "6": "a bit extroverted",
+    "7": "somewhat extroverted",
+    "8": "extroverted",
+    "9": "very extroverted",
+    "10": "extremely extroverted"
+  },
+  "aggression": {
+    "1": "extremely passive",
+    "2": "very passive",
+    "3": "passive",
+    "4": "somewhat passive",
+    "5": "a bit passive",
+    "6": "a bit aggressive",
+    "7": "somewhat aggressive",
+    "8": "aggressive",
+    "9": "very aggressive",
+    "10": "extremely aggressive"
+  },
+  "energy": {
+    "1": "extremely lazy",
+    "2": "very lazy",
+    "3": "lazy",
+    "4": "somewhat lazy",
+    "5": "a bit lazy",
+    "6": "a bit energetic",
+    "7": "somewhat energetic",
+    "8": "energetic",
+    "9": "very energetic",
+    "10": "hyperactive"
+  },
+  "temperament": {
+    "1": "extremely selfish",
+    "2": "very selfish",
+    "3": "selfish",
+    "4": "somewhat selfish",
+    "5": "a bit selfish",
+    "6": "a bit caring",
+    "7": "somewhat caring",
+    "8": "caring",
+    "9": "very caring",
+    "10": "extremely caring"
+  },
+  "curiosity": {
+    "1": "extremely cautious",
+    "2": "very cautious",
+    "3": "cautious",
+    "4": "somewhat cautious",
+    "5": "a bit cautious",
+    "6": "a bit bold",
+    "7": "somewhat bold",
+    "8": "bold",
+    "9": "very bold",
+    "10": "extremely bold"
+  }
+}

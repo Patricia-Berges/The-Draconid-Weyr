@@ -5,4 +5,4 @@ Personal python-based text game about managing and building a story of a group o
 The game is in the very early stages of development - it's not nearly prepared to be played yet. 
 
 # Technologies
-So far, the game is entirely based on python, using pygame and a sql database for save data.
+So far, the game is entirely based on python, using PyQt and a sql database for save data.
